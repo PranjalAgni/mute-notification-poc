@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
+import { updateStatusAfterExpiryTime } from '../utils/timer';
 import ColoredCircle from './ColoredCircle';
 import Timer from './Timer';
 
@@ -73,8 +74,13 @@ function Status() {
       const data = await response.json();
       console.log('Update success: ', data);
       setStatus(item);
-      if (item === 'break') setExpiryTime(120);
-      else setExpiryTime(60);
+      let expTime: null | number = 60 * 1000;
+      if (item === 'active') {
+        console.log('setting expiryTime as null for active');
+        expTime = null;
+      }
+      updateStatusAfterExpiryTime(expTime);
+      setExpiryTime(60);
     } else {
       console.error(response.status, response.statusText);
     }

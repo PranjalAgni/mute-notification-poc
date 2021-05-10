@@ -1,0 +1,20 @@
+{
+  "name": "fastmath-utils",
+  "version": "1.0.0",
+  "description": "A isomorphic npm package to use on server/client",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "rollup --config",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "maths",
+    "nodejs",
+    "rollup"
+  ],
+  "author": "PranjalAgni",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^2.47.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../src/lib/addition.js"],"sourcesContent":["const addition = (a, b) => {\n  return a + b;\n};\n\nexport default addition;\n"],"names":[],"mappings":";;;;;;AAAK,QAAC,QAAQ,GAAG,CAAC,CAAC,EAAE,CAAC,KAAK;EAC3B,EAAE,OAAO,CAAC,GAAG,CAAC,CAAC;EACf;;;;;;;;;;"}
